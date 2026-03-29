@@ -17,7 +17,7 @@ circuit = st.sidebar.selectbox("Court Circuit", options=CIRCUITS)
 if st.sidebar.button("Run Prediction"):
     try:
         # Load your specific model
-        model = tf.keras.models.load_model("litigation_model_v5.keras")
+        model = tf.keras.models.load_model("litigation_model_v5.keras", compile=False)
         
         # Prepare data
         input_data = {'year': year} 
